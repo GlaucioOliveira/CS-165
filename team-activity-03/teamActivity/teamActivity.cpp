@@ -117,7 +117,8 @@ int main()
 	}
 	catch (string out)
 	{
-		cout << "ERROR: " << out;
+		cout << "\nERROR: " << out << endl;
+		return -1;
 	}
 
 	for (int i = 0; i < lineNumbers; i++)
