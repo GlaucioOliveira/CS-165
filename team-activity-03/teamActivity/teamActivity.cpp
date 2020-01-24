@@ -21,6 +21,7 @@ using namespace std;
  ***********************************************************************/
 struct Scripture
 {
+	int booknumber;
 	string book;
 	int chapter;
 	int startverse;
@@ -31,15 +32,38 @@ struct Scripture
  * Function: display
  * Description: Displays the passed scripture.
  ***********************************************************************/
-void display(const Scripture& scripture)
+void display( Scripture& scripture)
 {
-	cout << scripture.book << " ";
-	cout << scripture.chapter << ":";
-	cout << scripture.startverse;
-
-	if (scripture.endverse > 0)
+	//if the startverse is higher then the endverse
+	//and if the endverse is valid ( > 0)
+	//invert the numbers.
+	if (scripture.endverse > 0 && 
+		scripture.startverse > scripture.endverse)
 	{
-		cout << "-" << scripture.endverse;
+		int endverse = scripture.endverse;
+
+		scripture.endverse = scripture.startverse;
+		scripture.startverse = endverse;
+	}
+
+	if (scripture.booknumber > 0)
+	{
+		cout << scripture.booknumber << " ";
+	}
+
+	cout << scripture.book << " ";
+	cout << scripture.chapter;
+
+	//if a valid startverse was passed, display it
+	if (scripture.startverse > 0)
+	{
+		cout << ":" << scripture.startverse;
+		
+		//if there is a endverse valid, display it.
+		if (scripture.endverse > 0)
+		{
+			cout << "-" << scripture.endverse;
+		}
 	}
 
 	cout << endl;
@@ -84,7 +108,7 @@ int main()
 {
 	Scripture scriptures[MAX_LINES];
 	string lines[MAX_LINES];
-	string fileName = "ta03c.txt"; // promptFileName();
+	string fileName = "ta03f.txt"; // promptFileName();
 	int lineNumbers = 0;
 
 	try
@@ -96,14 +120,18 @@ int main()
 		cout << "ERROR: " << out;
 	}
 
-
-
 	for (int i = 0; i < lineNumbers; i++)
 	{
-
 		Scripture scripture;
 
 		stringstream ss(lines[i]);
+
+		ss >> scripture.booknumber;
+		if (ss.fail())
+		{
+			scripture.booknumber = 0;
+			ss.clear(); //keep the same position;
+		}
 
 		ss >> scripture.book;
 		ss >> scripture.chapter;
