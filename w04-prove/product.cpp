@@ -15,7 +15,7 @@ void setFixedPoint()
 {
     cout.setf(ios::fixed);
     cout.setf(ios::showpoint);
-    cout.precision(2);   
+    cout.precision(1);   
 }
 
 void Product::prompt()
@@ -36,14 +36,14 @@ void Product::prompt()
 
 void Product::displayAdvertising()
 {
-    setFixedPoint();
+    //setFixedPoint();
     cout << name << " - " << "$" << price << endl;
     cout << "(" << description << ")" << endl;
 }
 void Product::displayInventory()
 {
     //$5.99 - Dry Erase Markers - 0.5 lbs
-    //setFixedPoint();
+    setFixedPoint();
     cout << "$" << price << " - " << name << " - " << weight << " lbs\n";
 }
 
@@ -84,11 +84,11 @@ Enter price: 40
   Shipping cost: $    2.90
   Total:         $   45.30
     */
-   setFixedPoint();
+   //setFixedPoint();
 
    cout << name << endl;
-   cout << "  Price: " << setw(10) << "$" << setw(8) << price << endl;
-   cout << "  Sales tax: " << setw(6) << "$" << setw(8) << getSalesTaxes() << endl;
-   cout << "  Shipping cost: " << setw(2) << "$" << setw(8) << getShippingCost() << endl;
-   cout << "  Total: " << setw(10) << "$" << setw(8) << getTotalPrice() << endl;
+   cout << "  Price:" << setw(11) << "$" << setw(8) << price << endl;
+   cout << "  Sales tax:" << setw(7) << "$" << setw(8) << getSalesTaxes() << endl;
+   cout << "  Shipping cost:" << setw(3) << "$" << setw(8) << getShippingCost() << endl;
+   cout << "  Total:" << setw(11) << "$" << setw(8) << getTotalPrice() << endl;
 }
