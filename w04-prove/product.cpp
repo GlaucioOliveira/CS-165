@@ -13,7 +13,7 @@ using namespace std;
 
 void setFixedPoint()
 {
-     cout.setf(ios::fixed);
+    cout.setf(ios::fixed);
     cout.setf(ios::showpoint);
     cout.precision(2);   
 }
@@ -63,10 +63,10 @@ Enter price: 40
   Total:         $   45.30
     */
    setFixedPoint();
-   
+
    cout << name << endl;
-   cout << "  Price: " << setw(11) << "$" << setw(8) << price << endl;
-   cout << "  Sales tax: " << setw(7) << "$" << setw(8) << price << endl;
-   cout << "  Shipping cost: " << setw(3) << "$" << setw(8) << price << endl;
-   cout << "  Total: " << setw(11) << "$" << setw(8) << price << endl;
+   cout << "  Price: " << setw(10) << "$" << setw(8) << price << endl;
+   cout << "  Sales tax: " << setw(6) << "$" << setw(8) << price << endl;
+   cout << "  Shipping cost: " << setw(2) << "$" << setw(8) << price << endl;
+   cout << "  Total: " << setw(10) << "$" << setw(8) << price << endl;
 }
