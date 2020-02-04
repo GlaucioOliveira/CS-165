@@ -6,8 +6,28 @@
 #ifndef PRODUCT_H
 #define PRODUCT_H
 
+#include <string>
+
+using namespace std;
 // put your class definition here
 
-void teste();
+class Product
+{
+private:
+    string name;
+    double price;
+    double weight;
+    string description;
+
+public:
+    void prompt();
+    double getSalesTaxes();
+    double getShippingCost();
+    double getTotalPrice();
+
+    void displayAdvertising();
+    void displayInventory();
+    void displayReceipt();
+};
 
 #endif

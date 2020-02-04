@@ -10,15 +10,18 @@ using namespace std;
 
 #include "product.h"
 
+
+
 int main()
 {
-   // Declare your Product object here
-   
+cout.setf(ios::fixed);
+cout.setf(ios::showpoint);
+cout.precision(2);
 
-   // Call your prompt function here
+    Product p;
 
-
-
+   p.prompt();
+ 
    cout << endl;
    cout << "Choose from the following options:\n";
    cout << "1 - Advertising profile\n";
@@ -34,15 +37,15 @@ int main()
 
    if (choice == 1)
    {
-      // Call your display advertising profile function here
+      p.displayAdvertising();
    }
    else if (choice == 2)
    {
-      // Call your display inventory line item function here
+      p.displayInventory();
    }
    else
    {
-      // Call your display receipt function here
+      p.displayReceipt();
    }
 
    return 0;
