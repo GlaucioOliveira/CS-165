@@ -8,4 +8,6 @@
 
 // put your class definition here
 
+void teste();
+
 #endif

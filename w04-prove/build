@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm a.out
+
+g++ assign04.cpp
+
+./a.out
