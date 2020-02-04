@@ -11,12 +11,15 @@
 
 using namespace std;
 
+void setFixedPoint()
+{
+     cout.setf(ios::fixed);
+    cout.setf(ios::showpoint);
+    cout.precision(2);   
+}
+
 void Product::prompt()
 {
-    cout.setf(ios::fixed);
-    cout.setf(ios::showpoint);
-    cout.precision(2);
-
     cout << "Enter name: ";
     getline(cin, name);
 
@@ -33,12 +36,14 @@ void Product::prompt()
 
 void Product::displayAdvertising()
 {
+    setFixedPoint();
     cout << name << " - " << "$" << price << endl;
     cout << "(" << description << ")" << endl;
 }
 void Product::displayInventory()
 {
     //$5.99 - Dry Erase Markers - 0.5 lbs
+    setFixedPoint();
     cout << "$" << price << " - " << name << " - " << weight << " lbs\n";
 }
 
@@ -57,6 +62,8 @@ Enter price: 40
   Shipping cost: $    2.90
   Total:         $   45.30
     */
+   setFixedPoint();
+   
    cout << name << endl;
    cout << "  Price: " << setw(11) << "$" << setw(8) << price << endl;
    cout << "  Sales tax: " << setw(7) << "$" << setw(8) << price << endl;
