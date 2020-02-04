@@ -43,8 +43,30 @@ void Product::displayAdvertising()
 void Product::displayInventory()
 {
     //$5.99 - Dry Erase Markers - 0.5 lbs
-    setFixedPoint();
+    //setFixedPoint();
     cout << "$" << price << " - " << name << " - " << weight << " lbs\n";
+}
+
+double Product::getSalesTaxes(){
+    return price * 0.06;
+}
+
+double Product::getShippingCost(){
+    //Create a getShippingCost method that returns a flat rate of $2.00 
+    //if the item is less than 5 lbs, and $2.00 + $0.10 per pound over 5 lbs.
+    if (weight < 5)
+    {
+        return 2.0;
+    }
+    else
+    {
+        return 2.0 + ((weight - 5) * 0.10);
+    }
+}
+
+double Product::getTotalPrice(){
+    //Create a getTotalPrice method that uses your other methods to return a total price.
+    return price + getSalesTaxes() + getShippingCost();
 }
 
 void Product::displayReceipt()
@@ -66,7 +88,7 @@ Enter price: 40
 
    cout << name << endl;
    cout << "  Price: " << setw(10) << "$" << setw(8) << price << endl;
-   cout << "  Sales tax: " << setw(6) << "$" << setw(8) << price << endl;
-   cout << "  Shipping cost: " << setw(2) << "$" << setw(8) << price << endl;
-   cout << "  Total: " << setw(10) << "$" << setw(8) << price << endl;
+   cout << "  Sales tax: " << setw(6) << "$" << setw(8) << getSalesTaxes() << endl;
+   cout << "  Shipping cost: " << setw(2) << "$" << setw(8) << getShippingCost() << endl;
+   cout << "  Total: " << setw(10) << "$" << setw(8) << getTotalPrice() << endl;
 }
