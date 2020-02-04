@@ -13,6 +13,10 @@ using namespace std;
 
 void Product::prompt()
 {
+    cout.setf(ios::fixed);
+    cout.setf(ios::showpoint);
+    cout.precision(2);
+
     cout << "Enter name: ";
     getline(cin, name);
 
@@ -30,12 +34,12 @@ void Product::prompt()
 void Product::displayAdvertising()
 {
     cout << name << " - " << "$" << price << endl;
-    cout << "(" << description << ")";
+    cout << "(" << description << ")" << endl;
 }
 void Product::displayInventory()
 {
     //$5.99 - Dry Erase Markers - 0.5 lbs
-    cout << "$" << price << " - " << name << " - " << weight;
+    cout << "$" << price << " - " << name << " - " << weight << " lbs\n";
 }
 
 void Product::displayReceipt()
@@ -54,8 +58,8 @@ Enter price: 40
   Total:         $   45.30
     */
    cout << name << endl;
-   cout << "  Price: " << setw(10) << "$" << setw(8) << price << endl;
-   cout << "  Sales Tax: " << setw(6) << "$" << setw(8) << price << endl;
-   cout << "  Shipping cost: " << setw(2) << "$" << setw(8) << price << endl;
-   cout << "  Total: " << setw(10) << "$" << setw(8) << price << endl;
+   cout << "  Price: " << setw(11) << "$" << setw(8) << price << endl;
+   cout << "  Sales tax: " << setw(7) << "$" << setw(8) << price << endl;
+   cout << "  Shipping cost: " << setw(3) << "$" << setw(8) << price << endl;
+   cout << "  Total: " << setw(11) << "$" << setw(8) << price << endl;
 }
