@@ -29,9 +29,21 @@ void Product::prompt()
 	cout << "Enter weight: ";
 	cin >> weight;
 
+	bool validPrice = false;
+	while (!validPrice)
+	{
+		cout << "Enter price: ";
+		cin >> price;
+		
+		if (!cin.fail() && price >= 0)
+		{
+			validPrice = true;
+		}
 
-	cout << "Enter price: ";
-	cin >> price;
+		cin.clear();
+		cin.ignore(256, '\n');
+	}
+	
 }
 
 void Product::displayAdvertising()
