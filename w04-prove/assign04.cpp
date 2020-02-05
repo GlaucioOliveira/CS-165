@@ -16,9 +16,9 @@ int main()
     cout.setf(ios::showpoint);
     cout.precision(2);
 
-    Product p;
+    Product product;
 
-    p.prompt();
+    product.prompt();
 
     cout << endl;
     cout << "Choose from the following options:\n";
@@ -35,15 +35,15 @@ int main()
 
     if (choice == 1)
     {
-        p.displayAdvertising();
+        product.displayAdvertising();
     }
     else if (choice == 2)
     {
-        p.displayInventory();
+        product.displayInventory();
     }
     else
     {
-        p.displayReceipt();
+        product.displayReceipt();
     }
 
     return 0;
