@@ -14,10 +14,7 @@ using namespace std;
 class Product
 {
 private:
-    string name;
-    double price;
-    double weight;
-    string description;
+
 
 public:
     void prompt();
@@ -28,6 +25,12 @@ public:
     void displayAdvertising();
     void displayInventory();
     void displayReceipt();
+
+    string name;
+    double price;
+    double weight;
+    string description;
+
 };
 
 #endif

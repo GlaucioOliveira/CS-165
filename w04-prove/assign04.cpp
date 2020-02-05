@@ -14,11 +14,15 @@ int main()
 {
     cout.setf(ios::fixed);
     cout.setf(ios::showpoint);
-    cout.precision(2);
 
     Product product;
 
-    product.prompt();
+   product.prompt();
+
+   /* product.name = "Finding Peace, Happiness, and Joy by Richard G. Scott";
+    product.description = "Elder Scott powerfully outlines the truths we need to understand and embrace in order to experience the gifts of peace, happiness, and joy.";
+    product.price = 14.49;
+    product.weight = 1.5;*/
 
     cout << endl;
     cout << "Choose from the following options:\n";
