@@ -15,7 +15,7 @@ void setFixedPoint()
 {
     cout.setf(ios::fixed);
     cout.setf(ios::showpoint);
-    cout.precision(1);   
+    cout.precision(1);
 }
 
 void Product::prompt()
@@ -31,7 +31,7 @@ void Product::prompt()
 
 
     cout << "Enter price: ";
-    cin >> price;   
+    cin >> price;
 }
 
 void Product::displayAdvertising()
@@ -47,11 +47,11 @@ void Product::displayInventory()
     cout << "$" << price << " - " << name << " - " << weight << " lbs\n";
 }
 
-double Product::getSalesTaxes(){
+double Product::getSalesTaxes() {
     return price * 0.06;
 }
 
-double Product::getShippingCost(){
+double Product::getShippingCost() {
     //Create a getShippingCost method that returns a flat rate of $2.00 
     //if the item is less than 5 lbs, and $2.00 + $0.10 per pound over 5 lbs.
     if (weight < 5)
@@ -64,7 +64,7 @@ double Product::getShippingCost(){
     }
 }
 
-double Product::getTotalPrice(){
+double Product::getTotalPrice() {
     //Create a getTotalPrice method that uses your other methods to return a total price.
     return price + getSalesTaxes() + getShippingCost();
 }
@@ -84,11 +84,11 @@ Enter price: 40
   Shipping cost: $    2.90
   Total:         $   45.30
     */
-   //setFixedPoint();
+    //setFixedPoint();
 
-   cout << name << endl;
-   cout << "  Price:" << setw(11) << "$" << setw(8) << price << endl;
-   cout << "  Sales tax:" << setw(7) << "$" << setw(8) << getSalesTaxes() << endl;
-   cout << "  Shipping cost:" << setw(3) << "$" << setw(8) << getShippingCost() << endl;
-   cout << "  Total:" << setw(11) << "$" << setw(8) << getTotalPrice() << endl;
+    cout << name << endl;
+    cout << "  Price:" << setw(11) << "$" << setw(8) << price << endl;
+    cout << "  Sales tax:" << setw(7) << "$" << setw(8) << getSalesTaxes() << endl;
+    cout << "  Shipping cost:" << setw(3) << "$" << setw(8) << getShippingCost() << endl;
+    cout << "  Total:" << setw(11) << "$" << setw(8) << getTotalPrice() << endl;
 }

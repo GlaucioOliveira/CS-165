@@ -1,6 +1,6 @@
 /***************************************************************
  * File: product.h
- * Author: (your name here)
+ * Author: Gláucio Oliveira
  * Purpose: Contains the definition of the Product class
  ***************************************************************/
 #ifndef PRODUCT_H
