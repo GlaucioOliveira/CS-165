@@ -11,11 +11,11 @@
 
 using namespace std;
 
-void setFixedPoint()
+void setFixedPoint(int precision)
 {
 	cout.setf(ios::fixed);
 	cout.setf(ios::showpoint);
-	cout.precision(1);
+	cout.precision(precision);
 }
 
 void Product::prompt()
@@ -36,7 +36,7 @@ void Product::prompt()
 
 void Product::displayAdvertising()
 {
-	//setFixedPoint();
+	setFixedPoint(2);
 	cout << name << " - " << "$" << price << endl;
 	cout << "(" << description << ")" << endl;
 }
@@ -88,6 +88,8 @@ Enter price: 40
   Total:         $   45.30
 	*/
 	//setFixedPoint();
+	
+	setFixedPoint(2);
 
 	cout << name << endl;
 	cout << "  Price:" << setw(10) << "$" << setw(8) << price << endl;
