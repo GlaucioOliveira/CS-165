@@ -19,7 +19,7 @@ private:
 public:
 
    Address() {
-      street = "unkown";
+      street = "unknown";
       address = "";
       city = "";
       state = "";
