@@ -43,4 +43,5 @@ void Address::display()
 {
    cout << street << endl;
    cout << city << ", " << state << " " << zip;
+   cout << endl;
 }

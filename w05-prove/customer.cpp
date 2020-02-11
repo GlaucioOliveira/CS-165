@@ -31,4 +31,5 @@ void Customer::display()
    cout << address.getStreet() << endl;
    cout << address.getCity() << ", " << address.getState()
    << " " << address.getZip();
+   cout << endl;
 }
