@@ -58,7 +58,7 @@ void Product::prompt()
  ***********************************************************************/
 void Product::displayAdvertising()
 {
-   setFixedPoint(2);
+   //setFixedPoint(2);
    cout << name << " - " << "$" << price << endl;
    cout << "(" << description << ")" << endl;
 }
@@ -119,7 +119,7 @@ double Product::getTotalPrice()
  ***********************************************************************/
 void Product::displayReceipt()
 {
-   setFixedPoint(2);
+  // setFixedPoint(2);
 
    cout << name << endl;
    cout << "  Price:" << setw(10) << "$" << setw(8) << price << endl;

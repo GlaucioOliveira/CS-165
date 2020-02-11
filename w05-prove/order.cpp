@@ -54,6 +54,6 @@ void Order::displayInformation()
 {
    cout << customer.getName() << endl;
    cout << product.getName() << endl;
-   cout << "Total Price: " << getTotalPrice();
+   cout << "Total Price: $" << getTotalPrice();
    cout << endl;
 }
