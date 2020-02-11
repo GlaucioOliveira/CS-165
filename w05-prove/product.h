@@ -28,7 +28,7 @@ public:
       price = 0;
    }
 
-   Product(string pName, string pDescription, double pWeight, double basePrice)
+   Product(string pName, string pDescription, double basePrice, double pWeight)
    {
       name = pName;
       description = pDescription;
