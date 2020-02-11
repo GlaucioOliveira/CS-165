@@ -127,3 +127,43 @@ void Product::displayReceipt()
    cout << "  Shipping cost:" << setw(2) << "$" << setw(8) << getShippingCost() << endl;
    cout << "  Total:" << setw(10) << "$" << setw(8) << getTotalPrice() << endl;
 }
+
+string Product::getName()
+{
+   return name;
+}
+
+void Product::setName(string pName)
+{
+   name = pName;
+}
+
+string Product::getDescription()
+{
+   return description;
+}
+
+void Product::setDescription(string pDescription)
+{
+   description = pDescription;
+}
+
+double Product::getBasePrice()
+{
+   return price;
+}
+
+void Product::setBasePrice(double pPrice)
+{
+   price = pPrice;
+}
+
+double Product::getWeight()
+{
+   return weight;
+}
+
+void Product::setWeight(double pWeight)
+{
+   weight = pWeight;
+}
