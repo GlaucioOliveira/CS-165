@@ -1,6 +1,6 @@
 /***************************************************************
  * File: product.cpp
- * Author: (your name here)
+ * Author: Glaucio Oliveira
  * Purpose: Contains the method implementations for the Product class.
  ***************************************************************/
 
@@ -11,101 +11,119 @@
 
 using namespace std;
 
+/**********************************************************************
+ * set float numbers precision.
+ ***********************************************************************/
 void setFixedPoint(int precision)
 {
-	cout.setf(ios::fixed);
-	cout.setf(ios::showpoint);
-	cout.precision(precision);
+   cout.setf(ios::fixed);
+   cout.setf(ios::showpoint);
+   cout.precision(precision);
 }
 
+/**********************************************************************
+ * prompt the user for the name, description, weight and price of a 
+ * product.
+ ***********************************************************************/
 void Product::prompt()
 {
-	cout << "Enter name: ";
-	getline(cin, name);
+   cout << "Enter name: ";
+   getline(cin, name);
 
-	cout << "Enter description: ";
-	getline(cin, description);
+   cout << "Enter description: ";
+   getline(cin, description);
 
-	cout << "Enter weight: ";
-	cin >> weight;
+   cout << "Enter weight: ";
+   cin >> weight;
 
-	bool validPrice = false;
-	while (!validPrice)
-	{
-		cout << "Enter price: ";
-		cin >> price;
-		
-		if (!cin.fail() && price >= 0)
-		{
-			validPrice = true;
-		}
+   bool validPrice = false;
+   while (!validPrice)
+   {
+      cout << "Enter price: ";
+      cin >> price;
+      
+      if (!cin.fail() && price >= 0)
+      {
+         validPrice = true;
+      }
 
-		cin.clear();
-		cin.ignore(256, '\n');
-	}
-	
+      cin.clear();
+      cin.ignore(256, '\n');
+   }
+   
 }
 
+/**********************************************************************
+ * Display the product in an advertising description.
+ ***********************************************************************/
 void Product::displayAdvertising()
 {
-	setFixedPoint(2);
-	cout << name << " - " << "$" << price << endl;
-	cout << "(" << description << ")" << endl;
+   setFixedPoint(2);
+   cout << name << " - " << "$" << price << endl;
+   cout << "(" << description << ")" << endl;
 }
+
+
+/**********************************************************************
+ * Display the product in an inventory description.
+ ***********************************************************************/
 void Product::displayInventory()
 {
-	//$5.99 - Dry Erase Markers - 0.5 lbs
-	cout.precision(2);
-	cout << "$" << price << " - " << name << " - ";
+   cout.precision(2);
+   cout << "$" << price << " - " << name << " - ";
 
-	cout.precision(1);
-	cout << weight << " lbs\n";
+   cout.precision(1);
+   cout << weight << " lbs\n";
 }
 
-double Product::getSalesTaxes() {
-	return price * 0.06;
+
+/**********************************************************************
+ * return the Sales Taxes (6% of the price)
+ ***********************************************************************/
+double Product::getSalesTaxes()
+{
+   return price * 0.06;
 }
 
-double Product::getShippingCost() {
-	//Create a getShippingCost method that returns a flat rate of $2.00 
-	//if the item is less than 5 lbs, and $2.00 + $0.10 per pound over 5 lbs.
-	if (weight < 5)
-	{
-		return 2.0;
-	}
-	else
-	{
-		return 2.0 + ((weight - 5) * 0.10);
-	}
+
+/**********************************************************************
+ * Returns the shipping cost
+ ***********************************************************************/
+double Product::getShippingCost()
+{
+   //Create a getShippingCost method that returns a flat rate of $2.00 
+   //if the item is less than 5 lbs, and $2.00 + $0.10 per pound over 5 lbs.
+   if (weight < 5)
+   {
+      return 2.0;
+   }
+   else
+   {
+      return 2.0 + ((weight - 5) * 0.10);
+   }
 }
 
-double Product::getTotalPrice() {
-	//Create a getTotalPrice method that uses your other methods to return a total price.
-	return price + getSalesTaxes() + getShippingCost();
+
+/**********************************************************************
+ * get the total price (price + sales taxes + shipping cost).
+ ***********************************************************************/
+double Product::getTotalPrice()
+{
+   //Create a getTotalPrice method that uses your other methods to return a total price.
+   return price + getSalesTaxes() + getShippingCost();
 }
 
+
+/**********************************************************************
+ * Display the product in an receipt description.
+ ***********************************************************************/
 void Product::displayReceipt()
 {
-	/*
-	Enter name: Bowling Ball
-Enter description: Knock 'em all down!
-Enter weight: 14
-Enter price: 40
+   setFixedPoint(2);
 
-
-	Bowling Ball
-  Price:         $   40.00
-  Sales tax:     $    2.40
-  Shipping cost: $    2.90
-  Total:         $   45.30
-	*/
-	//setFixedPoint();
-	
-	setFixedPoint(2);
-
-	cout << name << endl;
-	cout << "  Price:" << setw(10) << "$" << setw(8) << price << endl;
-	cout << "  Sales tax:" << setw(6) << "$" << setw(8) << getSalesTaxes() << endl;
-	cout << "  Shipping cost:" << setw(2) << "$" << setw(8) << getShippingCost() << endl;
-	cout << "  Total:" << setw(10) << "$" << setw(8) << getTotalPrice() << endl;
+   cout << name << endl;
+   cout << "  Price:" << setw(10) << "$" << setw(8) << price << endl;
+   cout << "  Sales tax:" << setw(6) << "$" << setw(8) << getSalesTaxes() << endl;
+   cout << "  Shipping cost:" << setw(2) << "$" << setw(8) << getShippingCost() << endl;
+   cout << "  Total:" << setw(10) << "$" << setw(8) << getTotalPrice() << endl;
 }

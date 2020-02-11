@@ -1,6 +1,6 @@
 /***************************************************************
  * File: product.h
- * Author: Gláucio Oliveira
+ * Author: Glaucio Oliveira
  * Purpose: Contains the definition of the Product class
  ***************************************************************/
 #ifndef PRODUCT_H
@@ -9,7 +9,7 @@
 #include <string>
 
 using namespace std;
-// put your class definition here
+
 
 class Product
 {

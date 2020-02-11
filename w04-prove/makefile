@@ -5,7 +5,7 @@
 # Author:
 #     Glaucio Oliveira
 # Summary:
-#     Put your summary code here... 
+#     ECOMMERCE PRODUCT INVENTORY 
 ###############################################################
 
 
