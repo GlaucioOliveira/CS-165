@@ -67,8 +67,6 @@ int main()
    promptComplexNumber(c1);  
    promptComplexNumber(c2);
 
-   cout << endl;
-
    // Call the addComplex function, putting the result in sum;
    Complex sum = addComplex(c1, c2);
    
