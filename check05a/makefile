@@ -1,9 +1,9 @@
 ###############################################################
 # Program:
 #     Checkpoint 05a, Getters and Setters
-#     Brother {Burton, Falin, Ercanbrack}, CS165
+#     Brother Walker, CS165
 # Author:
-#     your name here
+#     Glaucio Oliveira
 # Summary:
 #     Summaries are not necessary for checkpoint assignments.
 ###############################################################
