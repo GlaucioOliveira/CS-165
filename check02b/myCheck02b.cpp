@@ -18,7 +18,10 @@ struct Complex
    double imaginary;
 };
 
-// TODO: Add your prompt function here
+/**********************************************************************
+ * Function: promptComplexNumber
+ * Purpose: Prompt the user for a complex number
+ ***********************************************************************/
 void promptComplexNumber(Complex & c)
 {   
    cout << "Real: ";
