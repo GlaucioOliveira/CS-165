@@ -25,13 +25,3 @@ point.o: point.cpp point.h
 # Insert your rule for check06a.o here:
 check06a.o: check06a.cpp robot.h
 	g++ -c check06a.cpp
-
-### the main rule
-#a.out: complexTest.o complex.o
-#g++ -o a.out complexTest.o complex.o
-#tar -cf example14.tar *.h *.cpp makefile
-### for the object files
-#complexTest.o: complexTest.cpp complex.h
-#g++ -c complexTest.cpp
-#complex.o: complex.cpp complex.h
-#g++ -c complex.cpp
