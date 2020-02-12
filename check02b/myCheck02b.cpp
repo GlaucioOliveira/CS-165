@@ -34,7 +34,7 @@ void promptComplexNumber(Complex & c)
  ***********************************************************************/
 void display(const Complex& c)
 {
-      cout << "The sum is: " << c.real << " + " << c.imaginary << "i";
+      cout << c.real << " + " << c.imaginary << "i";
 }
 
 /**********************************************************************
