@@ -13,6 +13,12 @@ private:
 public:
     void prompt();
     void display() const;
+
+    double getDollars() const;
+    void setDollars(double pDollars);
+
+    double getCents() const;
+    void setCents(double pCents);
 };
 
 #endif

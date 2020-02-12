@@ -15,17 +15,17 @@ using namespace std;
  ****************************************************************/
 void Money::prompt()
 {
-    int dollars;
-    int cents;
+   int dollars;
+   int cents;
 
-    cout << "Dollars: ";
-    cin >> dollars;
+   cout << "Dollars: ";
+   cin >> dollars;
 
-    cout << "Cents: ";
-    cin >> cents;
+   cout << "Cents: ";
+   cin >> cents;
 
-    setDollars(dollars);
-    setCents(cents);
+   setDollars(dollars);
+   setCents(cents);
 }
 
 
@@ -35,6 +35,54 @@ void Money::prompt()
  ****************************************************************/
 void Money::display() const
 {
-    cout << "$" << getDollars() << ".";
-    cout << setfill('0') << setw(2) << getCents();
+   cout << "$" << getDollars() << ".";
+   cout << setfill('0') << setw(2) << getCents();
+}
+
+/*****************************************************************
+ * Function: getDollars
+ * Purpose: return the value of the dollars.
+ ****************************************************************/
+double Money::getDollars() const
+{
+   return dollars;
+}
+
+/*****************************************************************
+ * Function: setDollars
+ * Purpose: Set dollars value (if the value is negative, convert
+ * it to a positive number)
+ ****************************************************************/
+void Money::setDollars(double pDollars)
+{
+   if (pDollars < 0)
+   {
+      pDollars *= -1;
+   }
+
+   dollars = pDollars;
+}
+
+/*****************************************************************
+ * Function: getCents
+ * Purpose: return the value of cents.
+ ****************************************************************/
+double Money::getCents() const
+{
+   return cents;
+}
+
+/*****************************************************************
+ * Function: setCents
+ * Purpose: Set cents value (if the value is negative, convert
+ * it to a positive number).
+ ****************************************************************/
+void Money::setCents(double pCents)
+{
+   if (pCents < 0)
+   {
+      pCents *= -1;
+   }
+
+   cents = pCents;
 }
