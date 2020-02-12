@@ -15,7 +15,7 @@ int main()
 
    cout << "Robot details: ";
    r.display();
-
+//teste
    cout << endl;
 
    return 0;
