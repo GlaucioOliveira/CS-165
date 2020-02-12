@@ -13,4 +13,3 @@
 # good enough for now...
 a.out : money.h money.cpp check05a.cpp
 	g++ money.cpp check05a.cpp
-
