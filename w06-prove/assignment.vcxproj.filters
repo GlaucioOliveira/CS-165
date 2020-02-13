@@ -24,7 +24,19 @@
     <ClCompile Include="uiInteract.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="uiTest.cpp">
+    <ClCompile Include="driver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ground.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lander.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="velocity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -40,6 +52,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="uiInteract.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ground.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lander.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="velocity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
