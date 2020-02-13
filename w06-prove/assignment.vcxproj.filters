@@ -43,6 +43,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="makefile" />
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="point.h">

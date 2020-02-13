@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="FullSignature">
+  <Class Name="Game">
+    <Position X="10.25" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AIgQAAAAAAAAAAAAAEIAAAAAAAgAAAAAAAAAAAICEAA=</HashCode>
+      <FileName>game.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ground">
+    <Position X="7" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAIAAIAAAAAAAAAQAAEAAAAABoAEDA=</HashCode>
+      <FileName>ground.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lander">
+    <Position X="4.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAgCBCiAFQAAgAAAAAIEAAAABEQCACAAAAREAAEAACA=</HashCode>
+      <FileName>lander.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Point">
+    <Position X="2.5" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAGgAAAAAAGAAAAAAAAAAAAAABgAGAAAAA=</HashCode>
+      <FileName>point.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Interface">
+    <Position X="7.75" Y="4.5" Width="5.5" />
+    <TypeIdentifier>
+      <HashCode>AIgAgoAAEBAAEEAgAQHEQAEQAAAAIAAAQEAAAAAJAAA=</HashCode>
+      <FileName>uiInteract.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Velocity">
+    <Position X="2.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAgAAAAAAAAAAAAAAAAgAAAAQAAAAAA=</HashCode>
+      <FileName>velocity.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
