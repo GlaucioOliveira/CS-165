@@ -17,10 +17,7 @@
 #ifndef UI_INTERFACE_H
 #define UI_INTERFACE_H
 
-#include "point.h"
-#include <algorithm> // used for min() and max() (specifically required by Visual Studio)
-using std::min;
-using std::max;
+ #include "point.h"
 
 /********************************************
  * INTERFACE

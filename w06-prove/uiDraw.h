@@ -15,11 +15,8 @@
 
 #include <string>     // To display text on the screen
 #include <cmath>      // for M_PI, sin() and cos()
-#include <algorithm>  // used for min() and max()
 #include "point.h"    // Where things are drawn
 using std::string;
-using std::min;
-using std::max;
 
 /************************************************************************
  * DRAW DIGIT
