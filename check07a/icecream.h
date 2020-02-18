@@ -6,6 +6,7 @@
 
 #include <string>
 
+
 class IceCream
 {
 private:
@@ -19,6 +20,7 @@ public:
    float getTotalPrice() const;
    void prompt();
    void display() const;
+   static double salesTax;
 };
 
 

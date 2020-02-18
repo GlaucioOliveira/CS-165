@@ -8,6 +8,9 @@
 #include <iomanip>
 using namespace std;
 
+
+double IceCream::salesTax = 0.06;
+
 /***********************************
  * Constructors
  ***********************************/
@@ -31,7 +34,7 @@ float IceCream::getTotalPrice() const
 {
    // TODO: Change this to include sales tax
 
-   return price;
+   return price * (1 + salesTax);
 }
 
 /**********************************************************************
