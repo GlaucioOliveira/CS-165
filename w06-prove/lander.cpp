@@ -1,4 +1,5 @@
 #include "lander.h"
+#include "uiDraw.h"
 
 void Lander::setFuel(int Fuel)
 {
@@ -57,7 +58,11 @@ bool Lander::isLanded() const
 
 void Lander::draw()
 {
-   //TODO: Implement this function...
+   Point landerPosition;
+   landerPosition.setX(20);
+   landerPosition.setY(20);
+
+   drawLander(landerPosition);
 }
 
 void Lander::applyThrustBottom()
