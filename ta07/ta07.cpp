@@ -16,8 +16,30 @@ float* getMinValue(float* a, float* b)
 }
 
 // Stretch goals
-void swapElements(float* theArray[], int a, int b);
-void sortArray(float* theArray[]);
+void swapElements(float* theArray[], int a, int b)
+{
+   float* swap = theArray[a];
+
+   theArray[a] = theArray[b];
+   theArray[b] = swap;
+}
+
+void sortArray(float* theArray[], int length)
+{
+   bool sorted = false;
+   while (!sorted) {
+   sorted = true;
+      for (int i = 0; i < length - 1; i++)
+      {
+         if (getValueFromPointer(theArray[i]) >= getValueFromPointer(theArray[i + 1]))
+         {
+            swapElements(theArray, i, i + 1);
+            sorted = false;
+         }
+      }
+   }
+}
+
 
 int main()
 {
@@ -48,38 +70,58 @@ int main()
    float* pointerToMin = getMinValue(&arrayList[0], &arrayList[arraySize - 1]);
    cout << *pointerToMin;
 
-   /* // Core Requirement 1
-   int arraySize;
-   cout << "Enter the array size: ";
-   cin >> arraySize;
+   // Stretch Challenges
+   //1
 
-   // Allocate your array(s) here
+   // Ex: create an array of pointers to ints:
+   //int arraySize = 10;
+   float** myArray = new float* [arraySize];
 
-   // Fill your array with float values
-   for(int i = 0; i < arraySize; i++)
-   {
-          cout << "Enter a float value: ";
-          cin >> ????
-   }*/
-
-   /* // Core Requirement 2
    for (int i = 0; i < arraySize; i++)
    {
-      float value = getValueFromPointer(????);
-      cout << "The value of the element " << i << " is: ";
-      cout << value << endl;
+      myArray[i] = &arrayList[i];
    }
-   */
 
-   /* // Core Requirement 3
-   // Print the smaller of the first and last elements of the array
-   float *pointerToMin = getMinValue(????, ????);
-   cout << ?????
-   */
+   cout << endl;
+
+   for (int i = 0; i < arraySize; i++)
+   {
+      cout << getValueFromPointer(myArray[i]) << endl;
+   }
+
+   swapElements(myArray, 0, arraySize - 1);
+
+   cout << endl;
+
+   for (int i = 0; i < arraySize; i++)
+   {
+      cout << getValueFromPointer(myArray[i]) << endl;
+   }
+
+   sortArray(myArray,arraySize);
+
+   cout << endl;
+
+   for (int i = 0; i < arraySize; i++)
+   {
+      cout << getValueFromPointer(myArray[i]) << endl;
+   }
+
+   // Store the address of an int
+   //int someInt = 5;
+   //int* addressOfSomeInt = &someInt;
+
+   //myArray[0] = addressOfSomeInt;
+
+   // Shortcut
+   //int anotherInt = 11;
+   //myArray[1] = &anotherInt;
+
+
 
    // Clean up your array(s) here
    delete[] arrayList;
-
+   delete[] myArray;
    return 0;
 }
 
