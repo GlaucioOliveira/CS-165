@@ -22,7 +22,7 @@ int main()
    cout << "\nPhone info:\n";
    phone.display();
 
-   cout << "\nSmart phone:\n";
+   cout << "\n\nSmart phone:\n";
    SmartPhone smartphone;
    smartphone.prompt();
 
