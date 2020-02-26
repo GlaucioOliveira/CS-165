@@ -9,6 +9,8 @@ void SmartPhone::prompt()
 {
    promptNumber();
 
+   cin.ignore();
+
    cout << "Email: ";
    getline(cin, email);
 }
@@ -16,5 +18,5 @@ void SmartPhone::prompt()
 void SmartPhone::display()
 {
    Phone::display();
-   cout << "Email: " << email;
+   cout << endl << email;
 }
