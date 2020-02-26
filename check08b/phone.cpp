@@ -21,5 +21,5 @@ void Phone::promptNumber()
 
 void Phone::display()
 {
-   cout << "(" << areaCode << ")" << prefix << "-" << suffix << endl;
+   cout << "(" << areaCode << ")" << prefix << "-" << suffix;
 }
