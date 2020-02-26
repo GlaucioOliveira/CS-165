@@ -34,7 +34,7 @@ public:
    };
 
    void displayBookInfo() {
-      cout << endl << title << " (" << publicationYear << ") by " << author;
+      cout << endl << title << " (" << publicationYear << ") by " << author << endl;
    };
 
 private:
