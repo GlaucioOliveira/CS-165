@@ -3,5 +3,15 @@
  *******************/
 
 #include "smartphone.h"
+#include <iostream>
 
-// TODO: Put your SmartPhone methods here
+void SmartPhone::prompt()
+{
+   promptNumber();
+}
+
+void SmartPhone::display()
+{
+   Phone::display();
+   cout << "Email: " << email;
+}
