@@ -95,7 +95,7 @@ int main()
    book.promptBookInfo();
    book.displayBookInfo();
 
-   cout << endl << endl;
+   cout << endl;
 
    // Declare a TextBook object here and call its methods
    TextBook textBook;
@@ -104,7 +104,7 @@ int main()
    textBook.displayBookInfo();
    textBook.displaySubject();
 
-   cout << endl << endl;
+   cout << endl;
 
    // Declare a PictureBook object here and call its methods
    PictureBook pictureBook;
