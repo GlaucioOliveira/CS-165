@@ -50,7 +50,7 @@ class TextBook : public Book
 public:
    void promptSubject()
    {
-      cout << endl << "Subject: ";
+      cout  << "Subject: ";
       getline(cin, subject);
    };
 
@@ -69,7 +69,7 @@ class PictureBook : public Book
 public:
    void promptIllustrator()
    {
-      cout << endl << "Illustrator: ";
+      cout  << "Illustrator: ";
       getline(cin, illustrator);
    };
 
