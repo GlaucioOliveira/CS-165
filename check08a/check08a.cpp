@@ -4,7 +4,7 @@
 *    Brother {Burton, Falin, Ercanbrack}, CS165
 * Author:
 *    your name
-* Summary: 
+* Summary:
 *    Summaries are not necessary for checkpoint assignments.
 * ***********************************************************************/
 
@@ -16,13 +16,72 @@ using namespace std;
 // in this file.
 
 // TODO: Define your Book class here
+class Book
+{
+public:
+   void promptBookInfo() {
+
+      cout << "Title: ";
+      getline(cin, title);
+
+      cout << "Author: ";
+      getline(cin, author);
+
+      cout << "Publication Year: ";
+      cin >> publicationYear;
+
+      cin.ignore();
+   };
+
+   void displayBookInfo() {
+      cout << endl << title << " (" << publicationYear << ") by " << author;
+   };
+
+private:
+   string title;
+   string author;
+   int publicationYear;
+};
 
 
 // TODO: Define your TextBook class here
+class TextBook : public Book
+{
+public:
+   void promptSubject()
+   {
+      cout << endl << "Subject: ";
+      getline(cin, subject);
+   };
 
+   void displaySubject()
+   {
+      cout << "Subject: " << subject;
+   };
+
+private:
+   string subject;
+};
 
 // TODO: Add your PictureBook class here
+class PictureBook : public Book
+{
+public:
+   void promptIllustrator()
+   {
+      cout << endl << "Illustrator: ";
+      getline(cin, illustrator);
+   };
 
+   void displayIllustrator()
+   {
+      cout << "Illustrated by " << illustrator;
+   };
+
+
+private:
+   string illustrator;
+};
 
 
 /**********************************************************************
@@ -32,14 +91,27 @@ using namespace std;
 int main()
 {
    // Declare a Book object here and call its methods
+   Book book;
+   book.promptBookInfo();
+   book.displayBookInfo();
 
+   cout << endl << endl;
 
    // Declare a TextBook object here and call its methods
+   TextBook textBook;
+   textBook.promptBookInfo();
+   textBook.promptSubject();
+   textBook.displayBookInfo();
+   textBook.displaySubject();
 
+   cout << endl << endl;
 
    // Declare a PictureBook object here and call its methods
-
-
+   PictureBook pictureBook;
+   pictureBook.promptBookInfo();
+   pictureBook.promptIllustrator();
+   pictureBook.displayBookInfo();
+   pictureBook.displayIllustrator();
 
    return 0;
 }
