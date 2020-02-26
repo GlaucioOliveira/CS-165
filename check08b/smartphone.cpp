@@ -8,6 +8,9 @@
 void SmartPhone::prompt()
 {
    promptNumber();
+
+   cout << "Email: ";
+   getline(cin, email);
 }
 
 void SmartPhone::display()
