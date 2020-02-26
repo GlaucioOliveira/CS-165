@@ -105,6 +105,8 @@ void Game::handleInput(const Interface& ui)
    }
    else
    {
+      //if the game is over, let the user play again
+      //if He press the key <space>.
       if (ui.isSpace())
       {
          lander = Lander();
@@ -123,13 +125,13 @@ void Game::draw(const Interface& ui)
    if (lander.isLanded())
    {
       drawText(Point(), "You have successfully landed!");
-      drawText(Point(0, -15), "Press <Space> to Start Again");
+      drawText(Point(0, -15), "Press <Space> to Start Again.");
    }
 
    if (!lander.isAlive())
    {
       drawText(Point(), "You have crashed!");
-      drawText(Point(0, -15), "Press <Space> to Start Again");
+      drawText(Point(0, -15), "Press <Space> to Start Again.");
    }
 
    if (lander.canThrust() && lander.isAlive() && !lander.isLanded())
@@ -140,8 +142,13 @@ void Game::draw(const Interface& ui)
    Point fuelLocation;
    fuelLocation.setX(topLeft.getX() + 5);
    fuelLocation.setY(topLeft.getY() - 5);
+   
+   Point fuelLocationText;
+   fuelLocationText.setX(topLeft.getX() + 40);
+   fuelLocationText.setY(topLeft.getY() - 14);
 
    drawNumber(fuelLocation, lander.getFuel());
+   drawText(fuelLocationText, "Fuel");
 
    // draw ground
    ground.draw();

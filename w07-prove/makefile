@@ -8,9 +8,10 @@
 #     Moon Lander implementation in c++.
 # 
 # Above and Beyond
-#     When you submit your final project (not for milestones),
-#     list anything here that you did to go above and beyond
-#     the base requirements for your project.
+#     Added the possibility to start again the game on the 
+#     same map.
+#     Also added on the player screen the information of The
+#	  'Fuel', before were only the number.
 ###############################################################
 
 

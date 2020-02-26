@@ -20,6 +20,10 @@ class Lander
    Point getPoint() const;
    Velocity getVelocity() const;
 
+   void setVelocityDx(float dx);
+
+   void setVelocityDy(float dy);
+
    void setAlive(bool Alive);
    bool isAlive() const;
 
