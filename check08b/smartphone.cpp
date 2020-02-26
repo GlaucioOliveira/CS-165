@@ -18,5 +18,5 @@ void SmartPhone::prompt()
 void SmartPhone::display()
 {
    Phone::display();
-   cout << endl << email;
+   cout << endl << email << endl;
 }
