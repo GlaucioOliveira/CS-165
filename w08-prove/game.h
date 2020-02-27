@@ -21,7 +21,8 @@
 #include "point.h"
 #include "velocity.h"
 #include "rifle.h"
-
+#include "Bullet.h"
+#include "Bird.h"
 // TODO: include your bullet and bird classes
 
 
@@ -79,6 +80,7 @@ private:
     * Private methods to help with the game logic.
     *************************************************/
    bool isOnScreen(const Point & point);
+   
    void advanceBullets();
    void advanceBird();
    Bird* createBird();

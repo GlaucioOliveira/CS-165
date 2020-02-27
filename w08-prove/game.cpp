@@ -15,7 +15,7 @@
 #include "uiDraw.h"
 #include "uiInteract.h"
 #include "point.h"
-
+#include "Bird.h"
 #include <vector>
 using namespace std;
 
@@ -91,6 +91,8 @@ void Game :: advanceBullets()
  **************************************************************************/
 void Game :: advanceBird()
 {
+   Bird * bird = new Bird; //glaucio
+
    if (bird == NULL)
    {
       // there is no bird right now, possibly create one
@@ -153,6 +155,8 @@ bool Game :: isOnScreen(const Point & point)
  **************************************************************************/
 void Game :: handleCollisions()
 {
+   Bird * bird = new Bird; //glaucio
+
    // now check for a hit (if it is close enough to any live bullets)
    for (int i = 0; i < bullets.size(); i++)
    {
@@ -189,6 +193,8 @@ void Game :: handleCollisions()
  **************************************************************************/
 void Game :: cleanUpZombies()
 {
+   Bird * bird = new Bird; //glaucio
+
    // check for dead bird
    if (bird != NULL && !bird->isAlive())
    {

@@ -1,9 +1,9 @@
 ###############################################################
 # Program:
 #     Milestone 08, Skeet
-#     Brother {Burton, Falin, Ercanbrack, Comeau}, CS165
+#     Brother Walker, CS165
 # Author:
-#     your name here
+#     Glaucio Oliveira
 # Summary:
 #     Put your summary code here... 
 # Above and Beyond
