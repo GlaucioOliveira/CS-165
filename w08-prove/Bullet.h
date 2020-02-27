@@ -17,6 +17,7 @@ class Bullet
      void kill();
 
      void draw();
+
      void fire(Point point, float position);
 
    private:

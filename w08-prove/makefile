@@ -18,8 +18,8 @@ LFLAGS = -lglut -lGLU -lGL
 ###############################################################
 # Build the main game
 ###############################################################
-a.out: driver.o game.o uiInteract.o uiDraw.o point.o rifle.o 
-	g++ driver.o game.o uiInteract.o uiDraw.o point.o rifle.o $(LFLAGS)
+a.out: driver.o game.o uiInteract.o uiDraw.o point.o rifle.o bird.o bullet.o
+	g++ driver.o game.o uiInteract.o uiDraw.o point.o rifle.o bird.o bullet.o $(LFLAGS)
 
 ###############################################################
 # Individual files
@@ -28,6 +28,8 @@ a.out: driver.o game.o uiInteract.o uiDraw.o point.o rifle.o
 #    point.o       The position on the screen
 #    ground.o      Handles the ground / world
 #    game.o        Handles the game interaction
+#	 bird.o		   ????
+#	 bullet.o	   ????
 ###############################################################
 uiDraw.o: uiDraw.cpp uiDraw.h point.h
 	g++ -c uiDraw.cpp
@@ -38,7 +40,7 @@ uiInteract.o: uiInteract.cpp uiInteract.h
 point.o: point.cpp point.h
 	g++ -c point.cpp
 
-game.o: game.cpp uiDraw.h uiInteract.h point.h rifle.h bullet.h birds.h
+game.o: game.cpp uiDraw.h uiInteract.h point.h rifle.h bullet.h bird.h
 	g++ -c game.cpp
 
 driver.o: game.h uiInteract.h driver.cpp
@@ -47,6 +49,11 @@ driver.o: game.h uiInteract.h driver.cpp
 rifle.o: rifle.h point.h uiDraw.h rifle.cpp
 	g++ -c rifle.cpp
 
+bird.o: bird.h point.h bird.cpp
+	g++ -c bird.cpp
+
+bullet.o: bullet.h point.h bullet.cpp
+	g++ -c bullet.cpp
 #######################################################################
 # ADD YOUR ADDITIONAL RULES HERE!
 #
