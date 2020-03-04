@@ -1,10 +1,10 @@
 /***********************************************************************
 * Program:
 *    Checkpoint 09a, Virtual Functions
-*    Brother {Burton, Falin, Ercanbrack}, CS165
+*    Brother Walker, CS165
 * Author:
-*    your name
-* Summary: 
+*    Glaucio Oliveira
+* Summary:
 *    Summaries are not necessary for checkpoint assignments.
 * ***********************************************************************/
 
@@ -16,21 +16,77 @@ using namespace std;
 // in this file.
 
 // TODO: Define your classes here
+class Car {
+public:
+   Car() {
+      name = "Unknown model";
+   };
+   string getName() {
+      return name;
+   };
 
+   virtual string getDoorSpecs() const {
+      return "Unknown doors";
+   };
+
+   void setName(string Name) {
+      name = Name;
+   };
+
+private:
+   string name;
+};
+
+class Civic : public Car
+{
+public:
+   Civic() {
+      setName("Civic");
+   };
+
+   virtual string getDoorSpecs() const {
+      return "4 doors";
+   };
+};
+
+class Odyssey : public Car
+{
+public:
+   Odyssey() {
+      setName("Odyssey");
+   };
+
+   virtual string getDoorSpecs() const {
+      return "2 front doors, 2 sliding doors, 1 tail gate";
+   };
+};
+
+class Ferrari : public Car
+{
+public:
+   Ferrari() {
+      setName("Ferrari");
+   };
+
+   virtual string getDoorSpecs() const {
+      return "2 butterfly doors";
+   };
+};
 
 /**********************************************************************
  * Function: attachDoors
  * Purpose: This function can accept any type of Car object. It will
  *  call the appropriate functions to display the name and the doors info.
  ***********************************************************************/
+void attachDoors(Car & car) {
+   cout << "Attaching doors to " << car.getName() << " - " << car.getDoorSpecs() << endl;
+ }
+ 
 
-// TODO: Include your attachDoors function here
-
-
-/**********************************************************************
- * Function: main
- * Purpose: This is the entry point and driver for the program.
- ***********************************************************************/
+ /**********************************************************************
+  * Function: main
+  * Purpose: This is the entry point and driver for the program.
+  ***********************************************************************/
 int main()
 {
    // You should not change main
