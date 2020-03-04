@@ -15,7 +15,7 @@ using namespace std;
 // For this assignment, for simplicity, you may put all of your classes
 // in this file.
 
-// TODO: Define your classes here
+// Base class for a CAR
 class Car {
 public:
    Car() {
@@ -36,6 +36,7 @@ public:
 private:
    string name;
 };
+
 
 class Civic : public Car
 {

@@ -1,9 +1,9 @@
 /***********************************************************************
 * Program:
 *    Checkpoint 09b, Pure Virtual Functions
-*    Brother {Burton, Falin, Ercanbrack}, CS165
+*    Brother Walker, CS165
 * Author:
-*    your name
+*    Glaucio Oliveira
 * Summary: 
 *    Summaries are not necessary for checkpoint assignments.
 * ***********************************************************************/
