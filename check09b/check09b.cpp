@@ -4,7 +4,7 @@
 *    Brother Walker, CS165
 * Author:
 *    Glaucio Oliveira
-* Summary: 
+* Summary:
 *    Summaries are not necessary for checkpoint assignments.
 * ***********************************************************************/
 
@@ -25,9 +25,9 @@ public:
    virtual ~Shape() { }
    string getName() const { return name; }
    void setName(string name) { this->name = name; }
-   
-   // TODO: Define your pure virtual function here
 
+   // TODO: Define your pure virtual function here
+   virtual float getArea() = 0;
 };
 
 class Circle : public Shape
@@ -45,9 +45,16 @@ public:
    void setRadius(float radius) { this->radius = radius; }
 
    // TODO: Implement a constructor here
+   Circle()
+   {
+      setName("Circle");
+   }
 
    // TODO: Redefine getArea() here
-
+   virtual float getArea()
+   {
+      return 3.14f * radius * radius;
+   }
 };
 
 class Rectangle : public Shape
@@ -65,11 +72,20 @@ public:
    float getLength() const { return length; }
    float getWidth() const { return width; }
    void setLength(float length) { this->length = length; }
-   void setWidth(float width) {this->width = width; }
+   void setWidth(float width) { this->width = width; }
 
    // TODO: Implement a constructor here
+   Rectangle()
+   {
+      setName("Rectangle");
+   }
 
    // TODO: Redefine getArea() here
+   virtual float getArea()
+   {
+      return length * width;
+   }
+
 
 };
 
@@ -84,9 +100,10 @@ int main()
    // We will put all of our code in main for this one, just to keep
    // the focus on the virtual functions and not on passing items
    // between functions.
-   
+
    // TODO: 1. Declare your array here
    // For this assignment you can use the size: MAX_SIZE
+   Shape* myArray[MAX_SIZE];
 
    char letter;
    int count = 0;
@@ -104,8 +121,10 @@ int main()
 
          // TODO: 2. Create your circle object here, set the radius value
          // and add it to the array at index "count".
-         
-         
+         Circle* circle = new Circle;
+         circle->setRadius(radius);
+
+         myArray[count] = circle;
          count++; // we have seen another shape
       }
       else if (letter == 'r')
@@ -118,10 +137,14 @@ int main()
 
          cout << "Enter the width: ";
          cin >> width;
-      
+
          // TODO: 3. Create your rectangle object here, set the length and
          // width, and add it to the array at index "count".
-        
+         Rectangle * rectangle = new Rectangle;
+         rectangle->setLength(length);
+         rectangle->setWidth(width);
+
+         myArray[count] = rectangle;
 
          count++; // we have seen another shape
       }
@@ -136,14 +159,14 @@ int main()
    // Now we will display each shape
    for (int i = 0; i < count; i++)
    {
-      // TODO: 4. Add a cout statment here to display the name and the area
+      // TODO: 4. Add  a cout statment here to display the name and the area
       // of each shape in the list in the format "Circle - 10.32"
-  
+      cout << myArray[i]->getName() << " - " << myArray[i]->getArea() << endl;
 
    }
 
    // TODO: 5. Loop through and free the memory of each object.
-
+   delete[] myArray;
 
    return 0;
 }
