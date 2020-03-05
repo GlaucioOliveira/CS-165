@@ -47,9 +47,18 @@ void demo()
     cout << "What is your age? ";
 
     cin >> age;
+
+    if(cin.fail()) //if the input is not a int value
+    {
+        cin.clear(); //clear the error state
+        cin.ignore(256, '\n'); //needed to ignore what is on the input stream until the \n char is found.
+
+        cout << "Please type a number.";
+        return;
+    }
     cout << "Thats great!";
 
-    cin.ignore(); //needed to clear the cin buffet
+    cin.ignore(256, '\n');
 
     cout << "What's your name? ";
     getline(cin, name); //to get strings is a little bit different.
@@ -296,3 +305,135 @@ int abs(int); // returns the absolute value of a number
 ```
 
 
+
+## Asserts
+
+An `assert` is a check placed in a program representing an assumption.
+
+```cpp
+#include <cassert> //asserts are from this lib
+
+void saveGrade(int grade)
+{
+    assert(grade >= 0 && grade <= 10);
+
+    //... save grade in a file
+}
+```
+
+> Hints
+* To avoid an assert happining on production environment, the build needs to be to have a macro DNDEBUG defined (`g++ -DNDEBUG demo.cpp`).
+
+
+## Exceptions
+
+
+```cpp
+#include <string>
+void readFile() throw (string); //we need to declare that the function will thrown an exception and it's types.
+
+void doSomething()
+{
+    try
+    {
+        readFile();
+    }
+    catch(string error) //if an exception ins throw...
+    {
+        cout << "OOps.. "<< error;
+    }
+    catch(...) //catch-all
+    {
+        //...
+    }
+}
+
+void readFile() throw (string)
+{
+    throw "not implemented yet";
+}
+
+```
+
+
+## Structure
+
+
+```cpp
+#include <string>
+
+//Definition of a struct
+struct Student
+{
+    string name;
+    int age;
+};
+
+void doSomething()
+{
+    Student student1;
+    Student student2;
+
+    student1.name = "glaucio";
+    student.age = 29;
+
+    student2 = student1; //this will copy all the contents of a structure to another.
+
+    Student * pStudent = &student1; //store in the pStudent pointer the address of the structure.
+
+    cout << pStudent->name; //use the arrow operator (->) to access member vars from a pointer to a structure.
+
+
+}
+
+/*
+Passing the structure as a pointer to a arg, allows efficienty. Because a function can
+access it's member variables by using the arrow operator (->), without having to copy the
+structure.
+*/
+void display(const Student & student) //pass a constant struct by reference. Not change is allowed
+{
+    cout << student.name << endl;
+}
+
+//this is the same as the display function above.
+void display2(const Student * student)
+{
+    cout << student->name << endl; //arrow operator since it's a pointer.
+}
+
+```
+
+
+## Class
+
+
+```cpp
+class Student
+{
+    public:
+    Student() //constructor
+    {
+        name = "New Student";
+        age = 0;
+    };
+
+    Student(string name, int age) //non-default constructor
+    {
+        this->name = name;
+        this->age = age;
+    };
+
+    //destructor. It can't have return type nor arguments.
+    ~Student()
+    {
+        //clean up here
+    }
+    private:
+    string name;
+    int age;
+}
+
+```
+
+<!-- Stopped @ page 158 -->
