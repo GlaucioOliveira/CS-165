@@ -166,7 +166,11 @@ int main()
    }
 
    // TODO: 5. Loop through and free the memory of each object.
-   delete[] myArray;
+
+   for (int i = 0; i < count; i++)
+   {
+      delete myArray[i];
+   }
 
    return 0;
 }
