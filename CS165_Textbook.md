@@ -196,6 +196,37 @@ void addGrades()
 }
 ```
 
+<br>
+
+Below there is an example of using a vector to store classes:
+```cpp
+{
+    //suposing that the class HourlyEmployee and the SalaryEmployee
+    //inherit tthe Employee class.
+    vector<Employee*> employees;
+
+    HourlyEmployee * hourlyEmployee = new HourlyEmployee();
+
+    hourlyEmployee->setName(name);
+    hourlyEmployee->setHourlyWage(hourlyRate);
+    hourlyEmployee->setHour(hours);        
+    employees.push_back(hourlyEmployee);
+
+
+    SalaryEmployee * salaryEmployee = new SalaryEmployee();
+    salaryEmployee->setName(name);
+    salaryEmployee->setSalary(salary);
+
+    employees.push_back(hourlyEmployee);  
+
+   // since what we are storing are a pointer for an Employee
+   // we call its methods and properties using the arrow ->
+   for (int i = 0; i < employees.size(); i++)
+   {
+      employees[i]->display();
+   }
+}
+```
 
 ## Pointers (datatype \*), Addresses (&) and dereference (*)
 
@@ -436,4 +467,4 @@ class Student
 
 ```
 
-<!-- Stopped @ page 158 -->
+<!-- Stopped @ page 215 -->
