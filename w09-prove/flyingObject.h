@@ -1,4 +1,6 @@
-#pragma once
+#ifndef FLYINGOBJECT_H
+#define FLYINGOBJECT_H
+
 #include "point.h"
 #include "velocity.h"
 
@@ -12,8 +14,8 @@ protected:
 public:
    FlyingObject()
    {
-      this->point = point;
       this->velocity = velocity;
+      this->point = point;      
    }
 
    Point getPoint();
@@ -26,3 +28,4 @@ public:
    void advance();
 };
 
+#endif

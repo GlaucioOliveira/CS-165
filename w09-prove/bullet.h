@@ -3,12 +3,11 @@
 
 #include "FlyingObject.h"
 #include "uiDraw.h"
-#include <cmath> // used for sin, cos, and M_PI
-
+#include <cmath>
 
 
 /*********************************************
- * Bullet
+ * Class that handles the bullets
  *********************************************/
 class Bullet : public FlyingObject
 {
