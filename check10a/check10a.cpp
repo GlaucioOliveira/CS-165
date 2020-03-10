@@ -71,7 +71,6 @@ int main()
       }
       else
       {
-         cin.clear('\n', 256);
          cin.ignore();
       }
    }
