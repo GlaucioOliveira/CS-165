@@ -1,7 +1,7 @@
 #ifndef BULLET_H
 #define BULLET_H
 
-#include "FlyingObject.h"
+#include "flyingObject.h"
 #include "uiDraw.h"
 #include <cmath>
 

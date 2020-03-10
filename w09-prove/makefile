@@ -65,7 +65,7 @@ flyingObject.o: flyingObject.h point.h velocity.h flyingObject.cpp
 	g++ -c flyingObject.cpp
 
 birdNormal.o: birdNormal.h birdNormal.cpp bird.h
-	g++ -c BirdNormal.cpp
+	g++ -c birdNormal.cpp
 
 birdTough.o: birdTough.cpp birdTough.h bird.h
 	g++ -c birdTough.cpp

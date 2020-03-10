@@ -21,12 +21,12 @@
 #include "point.h"
 #include "velocity.h"
 #include "rifle.h"
-#include "Bullet.h"
+#include "bullet.h"
 
-#include "Bird.h"
-#include "BirdNormal.h"
-#include "BirdTough.h"
-#include "BirdSacred.h"
+#include "bird.h"
+#include "birdNormal.h"
+#include "birdTough.h"
+#include "birdSacred.h"
 
 #define CLOSE_ENOUGH 15
 

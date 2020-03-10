@@ -2,7 +2,7 @@
 #define BIRD_H
 
 #include "point.h"
-#include "FlyingObject.h"
+#include "flyingObject.h"
 #include "uiDraw.h"
 
 #define BIRD_PONTUATION 1

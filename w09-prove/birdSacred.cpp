@@ -1,4 +1,4 @@
-#include "BirdSacred.h"
+#include "birdSacred.h"
 
 #define BIRD_COLOR_GREEN 2
 #define BIRD_PONTUATION 5

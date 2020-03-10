@@ -1,4 +1,4 @@
-#include "BirdTough.h"
+#include "birdTough.h"
 
 #define BIRD_COLOR_BLUE 3
 #define BIRD_PONTUATION 5

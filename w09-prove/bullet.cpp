@@ -1,4 +1,4 @@
-#include "Bullet.h"
+#include "bullet.h"
 #include "point.h"
 #include <cmath>
 

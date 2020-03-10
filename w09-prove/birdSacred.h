@@ -1,7 +1,7 @@
 #ifndef BIRDSACRED_H
 #define BIRDSACRED_H
 
-#include "Bird.h"
+#include "bird.h"
 
 /*********************************************
  * Sacred Bird

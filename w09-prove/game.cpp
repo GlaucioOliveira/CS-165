@@ -15,7 +15,7 @@
 #include "uiDraw.h"
 #include "uiInteract.h"
 #include "point.h"
-#include "Bird.h"
+#include "bird.h"
 #include <vector>
 using namespace std;
 

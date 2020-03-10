@@ -1,4 +1,4 @@
-#include "BirdNormal.h"
+#include "birdNormal.h"
 #define BIRD_COLOR_RED 1
 
 BirdNormal::BirdNormal()

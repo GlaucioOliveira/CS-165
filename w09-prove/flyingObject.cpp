@@ -1,4 +1,4 @@
-#include "FlyingObject.h"
+#include "flyingObject.h"
 
 Point FlyingObject::getPoint()
 {

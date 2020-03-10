@@ -1,7 +1,7 @@
 #ifndef BIRDNORMAL_H
 #define BIRDNORMAL_H
 
-#include "Bird.h"
+#include "bird.h"
 
 /*********************************************
  * Normal Bird

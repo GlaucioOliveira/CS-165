@@ -1,7 +1,7 @@
 #ifndef BIRDTOUGH_H
 #define BIRDTOUGH_H
 
-#include "Bird.h"
+#include "bird.h"
 
 /*********************************************
  * Tough Bird (needs more then one hit to kill)
