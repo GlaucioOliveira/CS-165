@@ -146,7 +146,7 @@ void removeExpiredItems(vector<Food*> &items, int currentMonth,
    // Use an iterator to walk through the vector
    // and detect each item that has expired. Then delete it
    // and erase it from the list.
-   for (vector <Food*> :: reverse_iterator food = items.rbegin(); food != items.rend(); food++)
+   for (vector <Food*> :: iterator food = items.begin(); food != items.end(); food++)
    {
       if (((*food)->getYear() < currentYear && (*food)->getMonth() < currentMonth) 
       || ((*food)->getYear() == currentYear && (*food)->getMonth() < currentMonth))
@@ -155,7 +155,8 @@ void removeExpiredItems(vector<Food*> &items, int currentMonth,
          delete pFood;
          pFood = NULL;
 
-         items.erase((food+1).base());         
+         items.erase(food);         
+         food--;
       }      
    }
 }
