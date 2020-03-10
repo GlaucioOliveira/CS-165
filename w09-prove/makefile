@@ -6,7 +6,7 @@
 #     Glaucio Oliveira
 # Summary:
 #     Skeet game implementation in C++.
-# Above and Beyond
+# Above and Beyond 
 #     Added a color to a normal bird. 
 ###############################################################
 
