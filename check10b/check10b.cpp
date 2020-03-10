@@ -122,7 +122,6 @@ void displayInventory(vector<Food*> &items)
 {
    cout << "Your current inventory:\n";
 
-
    // TODO: Fill this in!
    // Use an iterator to walk through the vector
    // and call the display() method on each Food item
@@ -143,7 +142,6 @@ void removeExpiredItems(vector<Food*> &items, int currentMonth,
 {
    cout << "Checking for expired items...\n";
 
-
    // TODO: Fill this in!
    // Use an iterator to walk through the vector
    // and detect each item that has expired. Then delete it
@@ -155,6 +153,7 @@ void removeExpiredItems(vector<Food*> &items, int currentMonth,
       {
          Food* pFood = *food;
          delete pFood;
+         pFood = NULL;
 
          items.erase(food);
       }      
