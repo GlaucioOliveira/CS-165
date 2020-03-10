@@ -42,7 +42,6 @@ int main()
       else
       {  
          cin.ignore();
-         cin.clear('\n',256);         
       }
    }
 
