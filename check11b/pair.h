@@ -32,7 +32,7 @@ public:
 
    void display() 
    {
-      cout << t1 << " - " << t2 << endl;
+      cout << t1 << " - " << t2;
    }
 
 private:
