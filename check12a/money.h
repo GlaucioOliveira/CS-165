@@ -4,6 +4,9 @@
 #ifndef MONEY_H
 #define MONEY_H
 
+#include <iostream> // because of the insertion and extraction operator
+
+using namespace std;
 /******************************************************
  * Class: Money
  * Description: Holds a value of dollars and cents.
@@ -49,8 +52,8 @@ public:
 };
 
 // Non-member operator prototypes go here
- inline bool operator == (const Money & lhs, const Money & rhs);
- inline bool operator != (const Money& lhs, const Money& rhs);
- inline ostream& operator << (ostream& out, const Money& money);
+  bool operator == (const Money & lhs, const Money & rhs);
+  bool operator != (const Money& lhs, const Money& rhs);
+  ostream& operator << (ostream& out, const Money& money);
 
 #endif
