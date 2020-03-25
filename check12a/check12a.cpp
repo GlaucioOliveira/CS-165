@@ -25,7 +25,7 @@ int main()
    // DO NOT just use the display function: account1.display();
    // Make sure to use something like: cout << account1;
    
-   cout << "The values are: " << account1 << " and " << account2;
+   cout << "The values are: " << account1 << " and " << account2 << endl;
 
    cout << endl;
    cout << "Using the == operator, they are:\n";
