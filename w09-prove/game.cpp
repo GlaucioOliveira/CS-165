@@ -16,7 +16,6 @@
 #include "uiInteract.h"
 #include "point.h"
 #include "bird.h"
-#include <vector>
 using namespace std;
 
 #define OFF_SCREEN_BORDER_AMOUNT 5

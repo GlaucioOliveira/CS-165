@@ -56,7 +56,7 @@ void drawRect(const Point & center, int width, int height, int rotation);
  * DRAW CIRCLE
  * Draw a circle from a given location (center) of a given size (radius).
  *************************************************************************/
-void drawCircle(const Point & center, int radius, int color);
+void drawCircle(const Point & center, int radius);
 
 /************************************************************************
  * DRAW POLYGON

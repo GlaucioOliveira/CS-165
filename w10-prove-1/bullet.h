@@ -1,14 +1,27 @@
-#ifndef bullet_h
-#define bullet_h
+#ifndef BULLET_H
+#define BULLET_H
 
-#define BULLET_SPEED 5
-#define BULLET_LIFE 40
-
-
-
-// Put your Bullet class here
+#include "flyingObject.h"
+#include "uiDraw.h"
+#include <cmath>
 
 
+/*********************************************
+ * Class that handles the bullets
+ *********************************************/
+class Bullet : public FlyingObject
+{
+   public:
+     Bullet();
 
+     Point getPoint();
 
-#endif /* bullet_h */
+     void draw();
+
+     void fire(Point point, float position);
+
+   private:
+
+};
+
+#endif

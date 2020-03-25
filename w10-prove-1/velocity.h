@@ -1,9 +1,24 @@
 #ifndef VELOCITY_H
 #define VELOCITY_H
 
+#include "velocity.h"
 
-// Put your velocity class here, or overwrite this file with your own
-// velocity class from the previous project
+/*********************************************
+ * Class that deals with the velocity of objects
+  *********************************************/
+class Velocity
+{
+public:
+   Velocity();
+   float getDx() const;
+   float getDy() const;
+   void setDx(float dx);
+   void setDy(float dy);
+
+private:
+   float dx;
+   float dy;
+};
 
 
-#endif /* velocity_h */
+#endif

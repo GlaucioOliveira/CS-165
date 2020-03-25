@@ -6,7 +6,7 @@
 
 class FlyingObject
 {
-private:
+protected:
    bool alive;
    Point point;
    Velocity velocity;
@@ -14,8 +14,8 @@ private:
 public:
    FlyingObject()
    {
-      this->velocity = Velocity;
-      this->point = Point;      
+      this->velocity = velocity;
+      this->point = point;      
    }
 
    Point getPoint();

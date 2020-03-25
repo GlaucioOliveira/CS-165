@@ -86,8 +86,6 @@ void drawCallback()
 {
    // even though this is a local variable, all the members are static
    Interface ui;
-   glutReshapeWindow(399,399); // This is a workaround due to MAC no longer supporting Open GL
-
    // Prepare the background buffer for drawing
    glClear(GL_COLOR_BUFFER_BIT); //clear the screen
    glColor3f(1,1,1);
