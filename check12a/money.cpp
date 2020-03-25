@@ -37,3 +37,20 @@ void Money :: display() const
    cout << "$" << dollars << ".";
    cout << setfill('0') << setw(2) << cents;
 }
+
+inline bool operator == (const Money & lhs, const Money& rhs)
+{
+   return (lhs.getDollars() == rhs.getDollars() &&
+           lhs.getCents() == rhs.getCents());
+}
+
+
+inline bool operator != (const Money& lhs, const Money& rhs)
+{
+   return !(lhs == rhs);
+}
+
+ostream& operator << (ostream& out, const Money& money)
+{
+   money.display();
+}

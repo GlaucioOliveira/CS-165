@@ -49,5 +49,8 @@ public:
 };
 
 // Non-member operator prototypes go here
+ inline bool operator == (const Money & lhs, const Money & rhs);
+ inline bool operator != (const Money& lhs, const Money& rhs);
+ inline ostream& operator << (ostream& out, const Money& money);
 
 #endif
