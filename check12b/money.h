@@ -59,8 +59,8 @@ public:
    // TODO: Put your protoypes here!
 
    Money operator + (const Money & rhs);
-   Money operator += (const Money & rhs);
-   Money operator ++ ();
+   Money & operator += (const Money & rhs);
+   Money & operator ++ ();
 
    /*************************
     * Private helper methods

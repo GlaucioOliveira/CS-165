@@ -49,7 +49,7 @@ Money Money::operator+(const Money & rhs)
    return money;
 }
 
-Money Money::operator+=(const Money & rhs)
+Money & Money::operator+=(const Money & rhs)
 {
    *this = *this + rhs;
 
@@ -58,7 +58,7 @@ Money Money::operator+=(const Money & rhs)
    return *this;
 }
 
-Money Money::operator++()
+Money & Money::operator++()
 {
    this->setCents(this->getCents()+1);
 
