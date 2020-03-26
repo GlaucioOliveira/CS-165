@@ -38,6 +38,35 @@ void Money :: display() const
    cout << setfill('0') << setw(2) << getCents();
 }
 
+Money Money::operator+(const Money & rhs)
+{
+   Money money;
+   money.setDollars(this->getDollars() + rhs.getDollars());
+   money.setCents(this->getCents()+rhs.getCents());
+
+   money.handleOverflow();
+
+   return money;
+}
+
+Money Money::operator+=(const Money & rhs)
+{
+   *this = *this + rhs;
+
+   handleOverflow();
+
+   return *this;
+}
+
+Money Money::operator++()
+{
+   this->setCents(this->getCents()+1);
+
+   handleOverflow();
+
+   return *this;
+}
+
 /*****************************************************************
  * Function: handleOverflow
  * Purpose: Checks if cents is greater than 100, and if so, rolls
