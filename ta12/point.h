@@ -13,7 +13,7 @@
 #define POINT_H
 
 #include <iostream>
-
+#include "velocity.h"
 /*********************************************
  * POINT
  * A single position.  
@@ -44,5 +44,7 @@ private:
 // stream I/O useful for debugging
 std::ostream & operator << (std::ostream & out, const Point & pt);
 std::istream & operator >> (std::istream & in,        Point & pt);
+
+Point& operator += (Point& lhs, const Velocity& rhs);
 
 #endif // POINT_H

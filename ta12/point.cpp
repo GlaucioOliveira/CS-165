@@ -64,4 +64,13 @@ std::istream & operator >> (std::istream & in, Point & pt)
 
    return in;
 }
+
+Point& operator+=(Point& lhs, const Velocity& rhs)
+{
+   lhs.addX(rhs.getDx());
+   lhs.addY(rhs.getDy());
+
+
+   return lhs;
+}
    
