@@ -6,6 +6,8 @@
 
 #include <iostream>
 
+using namespace std;
+
 class NumberList
 {
 private:
@@ -22,7 +24,29 @@ public:
 
    // TODO: Add your constructor and destructor
 
+   NumberList(int size)
+   {
+      this->size = size;
+      array = new int[size];
 
+      for (int i = 0; i < size; i++)
+      {
+         array[i] = 0;
+      }
+   }
+
+   NumberList& operator=(const NumberList& rhs);
+
+
+   NumberList(const NumberList & rhs); // copy constructor
+
+   ~NumberList()
+   {
+   delete array;
+   array = NULL;
+   cout << "Freeing memory\n";
+
+   }
 
    int getNumber(int index) const;
    void setNumber(int index, int value);

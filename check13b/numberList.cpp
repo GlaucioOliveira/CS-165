@@ -7,6 +7,37 @@ using namespace std;
  * Function: getNumber
  * Description: Returns the number at the given index.
  ******************************************************/
+NumberList::NumberList(const NumberList& rhs)
+{
+   size = rhs.size;
+   array = new int[size];
+
+   for (int i = 0; i < size; i++)
+   {
+      array[i] = rhs.array[i];
+   }
+}
+
+
+NumberList& NumberList::operator=(const NumberList& rhs)
+{
+   if (this->array != NULL)
+   {
+      delete this->array;
+      this->array = NULL;
+   }
+
+   this->size = rhs.size;
+   this->array = new int[size];
+
+   for (int i = 0; i < size; i++)
+   {
+      this->array[i] = rhs.array[i];
+   }
+
+   return *this;
+}
+
 int NumberList::getNumber(int index) const
 {
    int number = -1;
