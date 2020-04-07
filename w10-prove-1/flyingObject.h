@@ -6,7 +6,7 @@
 
 class FlyingObject
 {
-protected: //allow those who inherit this class to handle private vars (its not the ideal situation...)
+protected: //allow those who inherit this class to handle private vars.
    bool alive;
    Point point;
    Velocity velocity;
@@ -25,7 +25,11 @@ public:
 
    bool isAlive();
    void kill();
-   void advance();
+   virtual void advance();
+
+   // The limit coordinates of the screen
+   Point topLeft;
+   Point bottomRight;
 };
 
 #endif

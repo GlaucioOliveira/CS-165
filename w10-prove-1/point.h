@@ -14,6 +14,8 @@
 
 #include <iostream>
 
+#define M_PI       3.14159265358979323846 // dont know why this is not loading :(
+
 /*********************************************
  * POINT
  * A single position.  

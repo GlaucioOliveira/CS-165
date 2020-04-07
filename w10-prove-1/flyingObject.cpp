@@ -1,5 +1,7 @@
 #include "flyingObject.h"
 
+// Getters and Setters for private objects
+
 Point FlyingObject::getPoint()
 {
    return point;
@@ -20,7 +22,7 @@ void FlyingObject::setPoint(Point point)
    this->point = point;
 }
 
-void FlyingObject::advance()
+void FlyingObject::advance() 
 {
    point.setX(point.getX() + velocity.getDx());
    point.setY(point.getY() + velocity.getDy());

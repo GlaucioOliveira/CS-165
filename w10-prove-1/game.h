@@ -13,13 +13,12 @@
 #include "uiInteract.h"
 #include "point.h"
 #include "velocity.h"
-#include "rifle.h"
 #include "bullet.h"
-
-#include "bird.h"
-#include "birdNormal.h"
-#include "birdTough.h"
-#include "birdSacred.h"
+#include "ship.h"
+//#include "bird.h"
+//#include "birdNormal.h"
+//#include "birdTough.h"
+//#include "birdSacred.h"
 
 #define CLOSE_ENOUGH 15
 
@@ -65,10 +64,11 @@ private:
    Point bottomRight;
    
    int score;  
-   Rifle rifle;
+   /*Rifle rifle;*/
  
-   vector<Bullet> bullets;
-   Bird * bird;
+   vector<Bullet*> bullets;
+   /*Bird * bird;*/
+   Ship ship;
 
    /*************************************************
     * Private methods to help with the game logic.
@@ -76,8 +76,8 @@ private:
    bool isOnScreen(const Point & point);
    
    void advanceBullets();
-   void advanceBird();
-   Bird* createBird();
+   void advanceShip();
+   //Bird* createBird();
    
    void handleCollisions();
    void cleanUpZombies();

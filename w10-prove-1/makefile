@@ -1,15 +1,15 @@
 ###############################################################
 # Program:
-#     Milestone 10, Asteroids
-#     Brother {Burton, Falin, Ercanbrack, Comeau}, CS165
+#     Project 13, Asteroids
+#     Brother Walker, CS165
 # Author:
-#     your name here
+#     Glaucio Oliveira
 # Summary:
-#     Put your summary code here... 
+#     Asteroid Implementation for CS-165 
 # Above and Beyond
-#     When you submit your final project (not for milestones),
-#     list anything here that you did to go above and beyond
-#     the base requirements for your project.
+#     Added a Break Functionality when the key `down` is pressed
+#	  Added the flames to display on the ship when the key `up` is pressed
+#
 ###############################################################
 
 
