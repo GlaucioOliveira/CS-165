@@ -27,5 +27,4 @@ private:
    float maxSpeed;
 };
 
-
 #endif
